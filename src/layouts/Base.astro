@@ -1,0 +1,29 @@
+---
+const { title = "dulkemot — Portfolio" } = Astro.props;
+---
+<html lang="id"><head><meta charset="utf-8" /><meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>{title}</title>
+<meta name="description" content="Portfolio dulkemot — Astro + JavaScript web developer" />
+<style>
+*{box-sizing:border-box}body{margin:0;background:#0B1526;color:#E7EEF7;font-family:Inter,'Segoe UI',system-ui,Arial}
+a{color:#FF8A00}.wrap{max-width:960px;margin:0 auto;padding:40px 24px}
+header{display:flex;justify-content:space-between;align-items:center;padding:16px 0}
+nav a{margin-left:16px;color:#BFD2EC;text-decoration:none;font-size:14px}
+.hero{padding:48px 0}.badge{display:inline-block;border:1px solid #2A3F5F;border-radius:100px;padding:6px 14px;font-size:12px;color:#8DBDFF;font-family:monospace}
+h1{font-size:48px;margin:16px 0 8px;letter-spacing:-.03em}h1 span{color:#FF8A00}
+.lead{color:#9FB4CE;max-width:60ch;line-height:1.6}
+.btn{background:#FF8A00;color:#13100A;font-weight:800;padding:12px 20px;border-radius:10px;text-decoration:none;display:inline-block;margin-right:10px}
+.btn.ghost{background:transparent;border:1px solid #2A3F5F;color:#E7EEF7}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:24px}
+.card{background:#111F36;border:1px solid #22365A;border-radius:16px;padding:20px}
+.card h3{margin:0 0 8px}.card p{color:#9FB4CE;font-size:14px;line-height:1.6}
+.tags{font-size:12px;color:#8DBDFF;font-family:monospace;margin:8px 0}
+ul{padding-left:18px;color:#BFD2EC;font-size:14px}footer{margin-top:48px;padding-top:24px;border-top:1px solid #22365A;color:#6B84A3;font-size:13px}
+.skills img{height:40px;margin:4px}
+@media(max-width:700px){.grid{grid-template-columns:1fr}h1{font-size:34px}}
+</style></head>
+<body><div class="wrap">
+<header><b>dulkemot.dev</b><nav><a href="/">Home</a><a href="https://github.com/dulkemot">GitHub</a><a href="mailto:hello@dulkemot.dev">Kontak</a></nav></header>
+<slot />
+<footer>© 2026 dulkemot — Astro static • MIT • Lampung, ID</footer>
+</div></body></html>

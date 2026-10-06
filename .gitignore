@@ -1,0 +1,12 @@
+# node
+node_modules/
+.astro/
+dist/
+
+# os
+.DS_Store
+Thumbs.db
+
+# env
+.env
+.env.local
