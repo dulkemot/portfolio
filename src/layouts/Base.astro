@@ -1,29 +1,41 @@
 ---
 const { title = "dulkemot — Portfolio" } = Astro.props;
+import { base, profile } from '../data/projects.js';
 ---
 <html lang="id"><head><meta charset="utf-8" /><meta name="viewport" content="width=device-width,initial-scale=1" />
 <title>{title}</title>
 <meta name="description" content="Portfolio dulkemot — Astro + JavaScript web developer" />
 <style is:global>
 *{box-sizing:border-box}body{margin:0;background:#0B1526;color:#E7EEF7;font-family:Inter,'Segoe UI',system-ui,Arial}
-a{color:#FF8A00}.wrap{max-width:960px;margin:0 auto;padding:40px 24px}
-header{display:flex;justify-content:space-between;align-items:center;padding:16px 0}
-nav a{margin-left:16px;color:#BFD2EC;text-decoration:none;font-size:14px}
-.hero{padding:48px 0}.badge{display:inline-block;border:1px solid #2A3F5F;border-radius:100px;padding:6px 14px;font-size:12px;color:#8DBDFF;font-family:monospace}
-h1{font-size:48px;margin:16px 0 8px;letter-spacing:-.03em}h1 span{color:#FF8A00}
-.lead{color:#9FB4CE;max-width:60ch;line-height:1.6}
-.btn{background:#FF8A00;color:#13100A;font-weight:800;padding:12px 20px;border-radius:10px;text-decoration:none;display:inline-block;margin-right:10px}
+a{color:#FF8A00}.wrap{max-width:960px;margin:0 auto;padding:0 24px 40px}
+header.site{position:sticky;top:0;z-index:20;display:flex;justify-content:space-between;align-items:center;padding:14px 0;background:rgba(11,21,38,.9);backdrop-filter:blur(12px);border-bottom:1px solid #22365A}
+header.site b{font-size:17px}nav a{margin-left:18px;color:#BFD2EC;text-decoration:none;font-size:14px;font-weight:600}nav a:hover{color:#fff}
+.hero{position:relative;padding:64px 0 40px}.hero::before{content:"";position:absolute;top:-40px;right:-80px;width:340px;height:340px;background:radial-gradient(circle,rgba(255,138,0,.22),transparent 70%);pointer-events:none}
+.badge{display:inline-block;border:1px solid #2A3F5F;border-radius:100px;padding:6px 14px;font-size:12px;color:#8DBDFF;font-family:ui-monospace,Menlo,Consolas,monospace}
+.badge .dot{display:inline-block;width:8px;height:8px;border-radius:50%;background:#3FB950;margin-right:8px}
+h1{font-size:48px;margin:18px 0 8px;letter-spacing:-.03em;line-height:1.1}h1 span{color:#FF8A00}
+h2.sec{margin:44px 0 4px;font-size:22px}h2.sec + .sub{color:#6B84A3;font-size:14px;margin:0 0 4px}
+.lead{color:#9FB4CE;max-width:60ch;line-height:1.7}
+.btn{background:#FF8A00;color:#13100A;font-weight:800;padding:12px 22px;border-radius:10px;text-decoration:none;display:inline-block;margin:6px 10px 6px 0}
 .btn.ghost{background:transparent;border:1px solid #2A3F5F;color:#E7EEF7}
-.grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:24px}
-.card{background:#111F36;border:1px solid #22365A;border-radius:16px;padding:20px}
-.card h3{margin:0 0 8px}.card p{color:#9FB4CE;font-size:14px;line-height:1.6}
-.tags{font-size:12px;color:#8DBDFF;font-family:monospace;margin:8px 0}
-ul{padding-left:18px;color:#BFD2EC;font-size:14px}footer{margin-top:48px;padding-top:24px;border-top:1px solid #22365A;color:#6B84A3;font-size:13px}
-.skills img{height:40px;margin:4px}
-@media(max-width:700px){.grid{grid-template-columns:1fr}h1{font-size:34px}}
+.btn.small{padding:8px 14px;font-size:13px;margin:12px 8px 0 0}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:20px}
+.card{background:#111F36;border:1px solid #22365A;border-radius:16px;padding:22px;transition:transform .15s,border-color .15s}
+.card:hover{transform:translateY(-3px);border-color:#FF8A00}
+.card h3{margin:0 0 8px;font-size:17px}.card p{color:#9FB4CE;font-size:14px;line-height:1.6}
+.tags{font-size:12px;color:#8DBDFF;font-family:ui-monospace,Menlo,Consolas,monospace;margin:8px 0}
+ul.points{padding-left:18px;color:#BFD2EC;font-size:13.5px;line-height:1.7;margin:10px 0 0}
+.svc{background:#0E1B31;border:1px solid #22365A;border-radius:14px;padding:18px}.svc b{display:block;margin-bottom:6px}.svc p{color:#9FB4CE;font-size:13.5px;line-height:1.6;margin:0}
+.stats{display:flex;gap:12px;flex-wrap:wrap;margin-top:20px}.stats img{border-radius:12px;max-width:100%}
+.skills img{height:42px;margin:5px 5px 5px 0}
+.cta{margin-top:44px;background:#111F36;border:1px solid #22365A;border-radius:18px;padding:28px;text-align:center}
+.cta h2{margin:0 0 8px}.cta p{color:#9FB4CE;font-size:14px}
+footer{margin-top:48px;padding-top:24px;border-top:1px solid #22365A;color:#6B84A3;font-size:13px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px}
+footer a{color:#8DBDFF;text-decoration:none}
+@media(max-width:700px){.grid{grid-template-columns:1fr}h1{font-size:34px}.hero{padding:44px 0 24px}nav a{margin-left:12px}}
 </style></head>
 <body><div class="wrap">
-<header><b>dulkemot.dev</b><nav><a href="/">Home</a><a href="https://github.com/dulkemot">GitHub</a><a href="mailto:hello@dulkemot.dev">Kontak</a></nav></header>
+<header class="site"><b>dulkemot.dev</b><nav><a href={`${base}/`}>Home</a><a href="https://github.com/dulkemot">GitHub</a><a href={`mailto:${profile.email}`}>Kontak</a></nav></header>
 <slot />
-<footer>© 2026 dulkemot — Astro static • MIT • Lampung, ID</footer>
+<footer><span>© 2026 dulkemot — Astro static • MIT • Lampung, ID</span><span><a href="https://github.com/dulkemot">GitHub</a> • <a href={`mailto:${profile.email}`}>Email</a></span></footer>
 </div></body></html>

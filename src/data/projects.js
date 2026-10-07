@@ -1,3 +1,6 @@
+// Base path agar jalan di GitHub Pages project site maupun domain root.
+export const base = (import.meta.env.BASE_URL || "/").replace(/\/$/, "");
+
 export const profile = {
   name: "dulkemot",
   role: "Web Developer — Astro + JavaScript",
@@ -10,33 +13,47 @@ export const skills = [
   "js", "ts", "astro", "nodejs", "html", "css", "tailwind", "git", "figma",
 ];
 
+export const services = [
+  { t: "Company Profile", d: "4–5 halaman statis: beranda hero video, produk, kegiatan, kontak. Cepat di HP, SEO oke." },
+  { t: "Katalog Statis", d: "Seluruh katalog cukup di 1 file data JS. Tambah produk tanpa CMS/database." },
+  { t: "Landing Page", d: "Satu halaman fokus konversi: headline, bukti operasional, tombol WA melayang." },
+];
+
 export const projects = [
   {
-    title: "APN — Distributor FMCG Company Profile",
+    title: "Company Profile Starter",
     stack: ["Astro", "JS", "Static", "Video Hero"],
-    desc: "Company profile 4 halaman: beranda video hero full-bleed, produk 14 kategori + harga, kegiatan & event, kontak. Static output, tanpa backend.",
+    desc: "Template company profile 4 halaman: hero video full-bleed, katalog produk, event, kontak + tombol WA. Live dan siap dipakai.",
     points: [
-      "Hero video 92vh + marquee logo 13 brand",
-      "Katalog produk statis via src/data/site.js",
-      "Build static, deploy murah ke shared hosting / Pages",
+      "Hero video + marquee brand + kartu operasional berfoto",
+      "Katalog & event cukup edit 1 file data",
+      "Deploy otomatis ke GitHub Pages",
     ],
-    demo: "#",
+    demo: "https://dulkemot.github.io/company-profile-starter/",
+    code: "https://github.com/dulkemot/company-profile-starter",
+  },
+  {
+    title: "Portfolio (situs ini)",
+    stack: ["Astro", "JS", "Pages"],
+    desc: "Situs portfolio ini sendiri: 1 halaman, data terpusat, build statis, deploy otomatis tiap push.",
+    points: [
+      "Skor Pages hijau: 1 file data untuk semua konten",
+      "Tanpa framework JS di browser — murni HTML/CSS",
+      "Workflow deploy GitHub Pages bawaan",
+    ],
+    demo: "https://dulkemot.github.io/portfolio/",
     code: "https://github.com/dulkemot/portfolio",
   },
   {
-    title: "Landing + Video Hero Snippet",
-    stack: ["HTML", "CSS", "JS"],
-    desc: "Snippet hero video reusable: scrim gradient, nav overlay, side-card operasional. <8MB mp4, poster fallback.",
-    points: ["Copy-paste 1 file mockup-apn.html", "Responsive 900px breakpoint", "Tanpa framework"],
-    demo: "#",
-    code: "https://github.com/dulkemot/portfolio",
-  },
-  {
-    title: "Katalog Produk Statis",
-    stack: ["Astro", "JS"],
-    desc: "Grid katalog dari 1 file data JS. Tambah kategori cukup edit array, tidak perlu CMS.",
-    points: ["14 kategori, tabel harga per dus/pack", "Lazy-load images", "Mudah diupdate manual"],
-    demo: "#",
-    code: "https://github.com/dulkemot/portfolio",
+    title: "GitHub Profile",
+    stack: ["Markdown", "Actions", "Stats"],
+    desc: "Repo profil khusus: visitor counter, skill badges, stats/streak, contribution snake via GitHub Actions.",
+    points: [
+      "Snake contributions update tiap 12 jam",
+      "Stats + top-languages otomatis",
+      "Shields + skillicons",
+    ],
+    demo: "https://github.com/dulkemot",
+    code: "https://github.com/dulkemot/dulkemot",
   },
 ];
