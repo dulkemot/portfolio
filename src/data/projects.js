@@ -7,6 +7,7 @@ export const profile = {
   location: "Lampung, Indonesia",
   tagline: "Company profile cepat, katalog statis, landing video hero.",
   email: "hello@dulkemot.dev",
+  wa: "https://wa.me/6282340336561?text=Halo%20dulkemot,%20saya%20lihat%20portfolio%20kamu%20di%20GitHub.",
 };
 
 export const skills = [

@@ -5,7 +5,7 @@
 <p align="center">Web Developer — Astro + JavaScript • Lampung, ID<br/>Company profile cepat, katalog statis, landing video hero.</p>
 
 <div align="center">
-  <img src="https://profile-counter.glitch.me/dulkemot/count.svg" alt="visitors" />
+  <img src="https://komarev.com/ghpvc/?username=dulkemot" alt="profile views" />
 </div>
 
 <div align="center">

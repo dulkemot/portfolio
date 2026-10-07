@@ -7,7 +7,7 @@ import { profile, skills, services, projects } from '../data/projects.js';
 <div class="badge"><span class="dot"></span>{profile.location} • OPEN FOR FREELANCE</div>
 <h1>Halo, saya <span>dulkemot</span>.<br />{profile.role}</h1>
 <p class="lead">{profile.tagline} Fokus: website company profile yang cepat dibuka di HP, gampang diupdate tanpa CMS.</p>
-<p><a class="btn" href={`mailto:${profile.email}`}>Hubungi Saya →</a><a class="btn ghost" href="https://github.com/dulkemot">GitHub →</a></p>
+<p><a class="btn" href={profile.wa}>Hubungi Saya →</a><a class="btn ghost" href="https://github.com/dulkemot">GitHub →</a></p>
 </div>
 
 <h2 class="sec">Layanan</h2>
@@ -45,6 +45,6 @@ import { profile, skills, services, projects } from '../data/projects.js';
 <div class="cta">
 <h2>Ada project website?</h2>
 <p>Ceritakan kebutuhanmu — company profile, katalog, atau landing page.</p>
-<p><a class="btn" href={`mailto:${profile.email}`}>Kirim Email →</a><a class="btn ghost" href="https://github.com/dulkemot">Lihat GitHub →</a></p>
+<p><a class="btn" href={profile.wa}>Chat WhatsApp →</a><a class="btn ghost" href="https://github.com/dulkemot">Lihat GitHub →</a></p>
 </div>
 </Base>
