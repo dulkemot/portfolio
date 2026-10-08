@@ -83,6 +83,42 @@ export const education = [
   { school: "SMAN 1 Malingping", detail: "IPA · 1998 — 2001" },
 ];
 
+export const infraProjects = [
+  {
+    title: "MikroTik Toolbox",
+    stack: ["RouterOS", "Failover", "WireGuard"],
+    desc: "5 script siap pakai: backup otomatis, failover 2 WAN, firewall hardening, Netwatch + alert Telegram, VPN road-warrior.",
+    points: [
+      "Recursive routing failover (cek 8.8.8.8/1.1.1.1)",
+      "Baseline input-chain + matikan service tak perlu",
+      "Tinggal ganti variabel & paste ke terminal",
+    ],
+    code: "https://github.com/dulkemot/mikrotik-toolbox",
+  },
+  {
+    title: "Docker Self-Hosted Stack",
+    stack: ["Docker", "Caddy", "Grafana", "Prometheus"],
+    desc: "Satu compose untuk server kecil: HTTPS otomatis, monitoring, uptime + pola deploy Laravel & Cloudflare Tunnel.",
+    points: [
+      "Caddy + Uptime Kuma + Prometheus + Grafana",
+      "Docs tunnel untuk server CGNAT",
+      "Checklist rilis Laravel aman",
+    ],
+    code: "https://github.com/dulkemot/docker-selfhosted-stack",
+  },
+  {
+    title: "Proxmox Homelab Guide",
+    stack: ["Proxmox VE", "Bash", "NAS"],
+    desc: "Catatan operasional: post-install, storage NAS, backup 3-2-1, template cloud-init, monitoring.",
+    points: [
+      "Script post-install & vzdump-to-NAS + retensi",
+      "Strategi backup + uji restore",
+      "Monitoring Zabbix/Grafana",
+    ],
+    code: "https://github.com/dulkemot/proxmox-homelab",
+  },
+];
+
 export const projects = [
   {
     title: "Company Profile Starter",

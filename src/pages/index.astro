@@ -1,6 +1,6 @@
 ---
 import Base from '../layouts/Base.astro';
-import { profile, skills, skillBadges, services, experience, education, projects, base } from '../data/projects.js';
+import { profile, skills, skillBadges, services, experience, education, projects, infraProjects, base } from '../data/projects.js';
 ---
 <Base title="M. Jaenussolihin — IT Infrastructure & Network">
 <div class="hero">
@@ -41,6 +41,18 @@ import { profile, skills, skillBadges, services, experience, education, projects
 <p>{p.desc}</p>
 <ul class="points">{p.points.map(pt => <li>{pt}</li>)}</ul>
 <p><a class="btn small" href={p.demo}>Live Demo →</a><a class="btn small ghost" href={p.code}>Code →</a></p>
+</div>))}
+</div>
+
+<h2 class="sec">Project Infrastruktur</h2>
+<p class="sub">Tooling operasional harian: router, server, dan virtualisasi.</p>
+<div class="grid">
+{infraProjects.map(p => (
+<div class="card"><h3>{p.title}</h3>
+<div class="tags">{p.stack.join(' • ')}</div>
+<p>{p.desc}</p>
+<ul class="points">{p.points.map(pt => <li>{pt}</li>)}</ul>
+<p><a class="btn small ghost" href={p.code}>Code →</a></p>
 </div>))}
 </div>
 
