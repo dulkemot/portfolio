@@ -1,28 +1,39 @@
 ---
 import Base from '../layouts/Base.astro';
-import { profile, skills, services, projects, base } from '../data/projects.js';
+import { profile, skills, skillBadges, services, experience, education, projects, base } from '../data/projects.js';
 ---
-<Base title="M. Jaenussolihin — Astro + JS Developer">
+<Base title="M. Jaenussolihin — IT Infrastructure & Network">
 <div class="hero">
 <video autoplay muted loop playsinline poster={`${base}/hero-poster.jpg`}><source src={`${base}/hero-bg.mp4`} type="video/mp4" /></video>
 <div class="scrim"></div>
 <h1>Halo, saya <span>{profile.name}</span>.<br />{profile.role}</h1>
-<p class="lead">{profile.tagline} Fokus: website company profile yang cepat dibuka di HP, gampang diupdate tanpa CMS.</p>
-<p><a class="btn" href={profile.wa}>Hubungi Saya →</a><a class="btn ghost" href="https://github.com/dulkemot">GitHub →</a></p>
+<p class="lead">{profile.title2}. {profile.tagline}</p>
+<p><a class="btn" href={profile.wa}>Hubungi Saya →</a><a class="btn ghost" href={profile.linkedin}>LinkedIn →</a></p>
 </div>
 
-<h2 class="sec">Layanan</h2>
-<p class="sub">Yang biasa saya kerjakan untuk klien.</p>
-<div class="grid" style="grid-template-columns:1fr 1fr 1fr">
+<h2 class="sec">Keahlian</h2>
+<p class="sub">Fokus utama selama 15+ tahun di dunia IT & jaringan.</p>
+<div class="grid grid4">
 {services.map(s => <div class="svc"><b>{s.t}</b><p>{s.d}</p></div>)}
 </div>
 
-<h2 class="sec">Skills</h2>
-<p class="sub">Senjata sehari-hari.</p>
+<h2 class="sec">Tools & Teknologi</h2>
+<p class="sub">Yang dipakai sehari-hari di lapangan dan data center.</p>
 <div class="skills"><img src={`https://skillicons.dev/icons?i=${skills.join(',')}`} alt="skills" loading="lazy" /></div>
+<p class="badges">
+{skillBadges.map(b => <span class="pill">{b}</span>)}
+</p>
 
-<h2 class="sec">Projects</h2>
-<p class="sub">Pilih yang live — semuanya bisa dibuka.</p>
+<h2 class="sec">Pengalaman</h2>
+<p class="sub">Perjalanan karir sejak 2008 — telekomunikasi, ISP, hingga IT manager.</p>
+<div class="timeline">
+{experience.map(e => (
+<div class="job"><div class="period">{e.period}</div><b>{e.company}</b><div class="role">{e.role}</div><p>{e.desc}</p></div>
+))}
+</div>
+
+<h2 class="sec">Project Web</h2>
+<p class="sub">Sampingan: template & tooling web statis di GitHub.</p>
 <div class="grid">
 {projects.map(p => (
 <div class="card"><h3>{p.title}</h3>
@@ -33,19 +44,22 @@ import { profile, skills, services, projects, base } from '../data/projects.js';
 </div>))}
 </div>
 
-<h2 class="sec">Stats</h2>
-<p class="sub">Aktivitas GitHub saya.</p>
+<h2 class="sec">Pendidikan</h2>
+<div class="grid">
+{education.map(e => <div class="svc"><b>{e.school}</b><p>{e.detail}</p></div>)}
+</div>
+
+<h2 class="sec">Stats GitHub</h2>
+<p class="sub">Aktivitas coding saya.</p>
 <div class="stats">
 <img width="390" src="https://github-readme-stats.vercel.app/api?username=dulkemot&show_icons=true&count_private=true&theme=transparent" alt="stats" loading="lazy" />
 <img width="390" src="https://github-readme-streak-stats.herokuapp.com/?user=dulkemot&theme=transparent" alt="streak" loading="lazy" />
 </div>
 
-<h2 class="sec">Kenapa Astro?</h2>
-<p class="lead">Static output = murah hosting, cepat di HP kentang, SEO gampang. Data produk cukup di 1 file JS, tidak perlu database untuk company profile / katalog.</p>
-
 <div class="cta">
-<h2>Ada project website?</h2>
-<p>Ceritakan kebutuhanmu — company profile, katalog, atau landing page.</p>
-<p><a class="btn" href={profile.wa}>Chat WhatsApp →</a><a class="btn ghost" href="https://github.com/dulkemot">Lihat GitHub →</a></p>
+<h2>Ada kebutuhan IT / jaringan?</h2>
+<p>Infrastruktur, monitoring, web deployment — atau sekadar diskusi.</p>
+<p><a class="btn" href={profile.wa}>Chat WhatsApp →</a><a class="btn ghost" href={`mailto:${profile.email}`}>{profile.email}</a></p>
+<p class="sub"><a href={profile.linkedin}>LinkedIn</a> • <a href={profile.github}>GitHub</a> • {profile.location}</p>
 </div>
 </Base>
