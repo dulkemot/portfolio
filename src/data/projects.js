@@ -156,4 +156,28 @@ export const projects = [
     demo: "https://github.com/dulkemot",
     code: "https://github.com/dulkemot/dulkemot",
   },
+  {
+    title: "Tiket Teknisi",
+    stack: ["Astro", "JS", "Offline"],
+    desc: "Work-order teknisi lapangan: buat tiket, status, share WA, export CSV. Offline via localStorage.",
+    points: ["Filter + statistik", "Share WA format rapi", "XSS-safe rendering"],
+    demo: "https://dulkemot.github.io/tiket-teknisi/",
+    code: "https://github.com/dulkemot/tiket-teknisi",
+  },
+  {
+    title: "Kalkulator Subnet",
+    stack: ["Astro", "JS", "Offline"],
+    desc: "Network, broadcast, range host, netmask & biner dari IP/prefix. Untuk teknisi jaringan.",
+    points: ["Hasil instan + tombol salin", "Tangani /31 & /32", "Cheat prefix populer"],
+    demo: "https://dulkemot.github.io/subnet-kalkulator/",
+    code: "https://github.com/dulkemot/subnet-kalkulator",
+  },
+  {
+    title: "Katalog Mobile",
+    stack: ["Astro", "JS", "Offline"],
+    desc: "Katalog produk mobile: search live, filter kategori, order per item via WhatsApp.",
+    points: ["Grid responsif", "Template pesanan otomatis", "Data 1 array"],
+    demo: "https://dulkemot.github.io/katalog-mobile/",
+    code: "https://github.com/dulkemot/katalog-mobile",
+  },
 ];
