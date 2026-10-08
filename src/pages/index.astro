@@ -2,10 +2,9 @@
 import Base from '../layouts/Base.astro';
 import { profile, skills, services, projects } from '../data/projects.js';
 ---
-<Base title="dulkemot — Astro + JS Developer">
+<Base title="M. Jaenussolihin — Astro + JS Developer">
 <div class="hero">
-<div class="badge"><span class="dot"></span>{profile.location} • OPEN FOR FREELANCE</div>
-<h1>Halo, saya <span>dulkemot</span>.<br />{profile.role}</h1>
+<h1>Halo, saya <span>{profile.name}</span>.<br />{profile.role}</h1>
 <p class="lead">{profile.tagline} Fokus: website company profile yang cepat dibuka di HP, gampang diupdate tanpa CMS.</p>
 <p><a class="btn" href={profile.wa}>Hubungi Saya →</a><a class="btn ghost" href="https://github.com/dulkemot">GitHub →</a></p>
 </div>

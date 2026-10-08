@@ -2,7 +2,7 @@
 export const base = (import.meta.env.BASE_URL || "/").replace(/\/$/, "");
 
 export const profile = {
-  name: "dulkemot",
+  name: "M. Jaenussolihin",
   role: "Web Developer — Astro + JavaScript",
   location: "Lampung, Indonesia",
   tagline: "Company profile cepat, katalog statis, landing video hero.",

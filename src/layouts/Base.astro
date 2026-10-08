@@ -1,10 +1,10 @@
 ---
-const { title = "dulkemot — Portfolio" } = Astro.props;
+const { title = "M. Jaenussolihin — Portfolio" } = Astro.props;
 import { base, profile } from '../data/projects.js';
 ---
 <html lang="id"><head><meta charset="utf-8" /><meta name="viewport" content="width=device-width,initial-scale=1" />
 <title>{title}</title>
-<meta name="description" content="Portfolio dulkemot — Astro + JavaScript web developer" />
+<meta name="description" content="Portfolio M. Jaenussolihin — Astro + JavaScript web developer" />
 <style is:global>
 *{box-sizing:border-box}body{margin:0;background:#0B1526;color:#E7EEF7;font-family:Inter,'Segoe UI',system-ui,Arial}
 a{color:#FF8A00}.wrap{max-width:960px;margin:0 auto;padding:0 24px 40px}
@@ -37,5 +37,5 @@ footer a{color:#8DBDFF;text-decoration:none}
 <body><div class="wrap">
 <header class="site"><b>dulkemot.dev</b><nav><a href={`${base}/`}>Home</a><a href="https://github.com/dulkemot">GitHub</a><a href={`mailto:${profile.email}`}>Kontak</a></nav></header>
 <slot />
-<footer><span>© 2026 dulkemot — Astro static • MIT • Lampung, ID</span><span><a href="https://github.com/dulkemot">GitHub</a> • <a href={`mailto:${profile.email}`}>Email</a></span></footer>
+<footer><span>© 2026 M. Jaenussolihin — Astro static • MIT • Lampung, ID</span><span><a href="https://github.com/dulkemot">GitHub</a> • <a href={`mailto:${profile.email}`}>Email</a></span></footer>
 </div></body></html>
