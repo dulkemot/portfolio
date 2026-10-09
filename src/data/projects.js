@@ -204,4 +204,28 @@ export const projects = [
     demo: "https://dulkemot.github.io/profil-hotel-bootstrap/",
     code: "https://github.com/dulkemot/profil-hotel-bootstrap",
   },
+  {
+    title: "Minimarket Segar (Astro)",
+    stack: ["Astro", "JS", "Offline"],
+    desc: "Katalog + promo + keranjang belanja dengan checkout WhatsApp, tersimpan localStorage.",
+    points: ["Search + filter kategori", "Qty + total otomatis", "Teks pesanan rapi"],
+    demo: "https://dulkemot.github.io/minimarket-segar/",
+    code: "https://github.com/dulkemot/minimarket-segar",
+  },
+  {
+    title: "Notaris Amanah (Astro)",
+    stack: ["Astro", "JS", "Kalkulator"],
+    desc: "Layanan + syarat dokumen, simulasi biaya (jasa + 1% transaksi), booking WA.",
+    points: ["Estimasi + breakdown", "Tombol konsultasi terisi", "FAQ accordion"],
+    demo: "https://dulkemot.github.io/notaris-amanah/",
+    code: "https://github.com/dulkemot/notaris-amanah",
+  },
+  {
+    title: "Toko Besi Jaya (Astro)",
+    stack: ["Astro", "JS", "Kalkulator"],
+    desc: "Katalog harga + kalkulator batang/kg besi dan lembar wiremesh + order WA.",
+    points: ["Tabel kg/m standar", "Cadangan potongan 10%", "Kirim hitungan ke WA"],
+    demo: "https://dulkemot.github.io/toko-besi-jaya/",
+    code: "https://github.com/dulkemot/toko-besi-jaya",
+  },
 ];
