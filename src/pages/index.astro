@@ -40,9 +40,11 @@ import { profile, skills, skillBadges, services, experience, education, projects
 <div class="tags">{p.stack.join(' • ')}</div>
 <p>{p.desc}</p>
 <ul class="points">{p.points.map(pt => <li>{pt}</li>)}</ul>
-<p><a class="btn small" href={p.demo}>Live Demo →</a><a class="btn small ghost" href={p.code}>Code →</a></p>
+<p>{p.demo !== "#" && <a class="btn small" href={p.demo}>Live Demo →</a>}<a class="btn small ghost" href={p.code}>Code →</a></p>
 </div>))}
 </div>
+
+<h2 class="sec">Project Infrastruktur</h2>
 
 <h2 class="sec">Project Infrastruktur</h2>
 <p class="sub">Tooling operasional harian: router, server, dan virtualisasi.</p>

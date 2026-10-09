@@ -180,4 +180,28 @@ export const projects = [
     demo: "https://dulkemot.github.io/katalog-mobile/",
     code: "https://github.com/dulkemot/katalog-mobile",
   },
+  {
+    title: "Jadwal Shift (Node.js)",
+    stack: ["Node.js", "Tanpa dependensi", "JSON API"],
+    desc: "Roster shift 3 tim: klik sel untuk putar tim, tersimpan otomatis, ada API JSON.",
+    points: ["Zero npm install", "Validasi + anti traversal", "Jalan di VPS mini"],
+    demo: "#",
+    code: "https://github.com/dulkemot/jadwal-shift",
+  },
+  {
+    title: "Inventaris Alat (PHP)",
+    stack: ["PHP native", "SQLite", "1 file"],
+    desc: "Stok gudang teknik: mutasi masuk/keluar, cegah minus, warning stok menipis.",
+    points: ["Tanpa framework/composer", "Backup = copy 1 file", "Tema buku kertas"],
+    demo: "#",
+    code: "https://github.com/dulkemot/inventaris-alat",
+  },
+  {
+    title: "Profil Hotel (Bootstrap)",
+    stack: ["HTML5", "Bootstrap 5", "Static"],
+    desc: "Landing hotel: filter kamar + pesan WA, carousel, peta, tombol WA melayang.",
+    points: ["Satu file, tanpa build", "Foto lokal", "Live di Pages"],
+    demo: "https://dulkemot.github.io/profil-hotel-bootstrap/",
+    code: "https://github.com/dulkemot/profil-hotel-bootstrap",
+  },
 ];
